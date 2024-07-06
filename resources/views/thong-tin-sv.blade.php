@@ -18,28 +18,32 @@
         <h1>bảng thông tin sinh viên</h1>
     </header>
     <main>
-        <div class="table-responsive">
-            <table class="table table-primary">
-                <thead>
-                    <tr>
-                        <th scope="col">id</th>
-                        <th scope="col">name</th>
-                        <th scope="col">masv</th>
-                        <th scope="col">birth</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($sv as $value)
-                        <tr class="">
-                            <td scope="row">{{ $value['id'] }}</td>
-                            <td>{{ $value['name'] }}</td>
-                            <td>{{ $value['masv'] }}</td>
-                            <td>{{ $value['birth'] }}</td>
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">name</th>
+                            <th scope="col">masv</th>
+                            <th scope="col">birth</th>
+                            <th scope="col">nơi sinh</th>
                         </tr>
-                    @endforeach
+                    </thead>
+                    <tbody>
+                        @foreach ($sv as $value)
+                            <tr class="">
+                                <td scope="row">{{ $value['id'] }}</td>
+                                <td>{{ $value['name'] }}</td>
+                                <td>{{ $value['masv'] }}</td>
+                                <td>{{ $value['birth'] }}</td>
+                                <td>{{ $value['noiSinh'] }}</td>
+                            </tr>
+                        @endforeach
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </main>
