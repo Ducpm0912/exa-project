@@ -70,4 +70,7 @@ class UserController extends Controller
         DB::table('users')->where('id', $req->userId)->update($data);
         return redirect()->route('users.listUsers');
     }
+    public function test(){
+        return view('admin.product.listProduct');
+    }
 }

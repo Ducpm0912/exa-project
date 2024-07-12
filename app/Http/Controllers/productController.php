@@ -69,8 +69,8 @@ class productController extends Controller
         return redirect()->route('products.listProduct');
     }
     public function search(Request $req){
-        $data = $req->input('key');
-        $key = DB::where('pro_name', 'like','%{$key}%')->get();
-        return view('products.listProduct',compact('key'));
+        $data = $req->input('search');
+        $listProduct = DB::where('pro_name', 'like','%'. $data .'%')->get();
+        return view('products.listProduct',compact('listProduct'));
     }
 }

@@ -45,3 +45,5 @@ Route::group([
     route::post('update-product', [ProductController::class, 'updatePostProduct'])->name('updatePostProduct');
     route::get('delete-product/{proId}', [ProductController::class, 'deleteProduct'])->name('deleteProduct');
 });
+
+route::get('test',[UserController::class,'test']);
